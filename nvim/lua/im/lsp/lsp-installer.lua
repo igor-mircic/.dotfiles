@@ -26,3 +26,8 @@ lsp_installer.on_server_ready(function(server)
 	server:setup(opts)
 end)
 
+local lspconfig = require'lspconfig'
+
+lspconfig.emmet_ls.setup({
+    filetypes = { "html", "css", "typescriptreact", "javascriptreact" },
+})
